@@ -1,6 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -53,7 +51,7 @@ namespace RazorPagesMovie.Pages_Products
             if (product != null)
             {
                 Product = product;
-                _context.Product.Remove(Product);
+                Product.IsDeleted = true; // Ustawienie IsDeleted na true
                 await _context.SaveChangesAsync();
             }
 

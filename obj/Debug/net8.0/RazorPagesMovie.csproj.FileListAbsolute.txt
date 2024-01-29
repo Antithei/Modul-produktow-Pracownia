@@ -552,3 +552,4 @@ C:\Users\wikto\Desktop\projprzed\obj\Debug\net8.0\refint\RazorPagesMovie.dll
 C:\Users\wikto\Desktop\projprzed\obj\Debug\net8.0\RazorPagesMovie.pdb
 C:\Users\wikto\Desktop\projprzed\obj\Debug\net8.0\RazorPagesMovie.genruntimeconfig.cache
 C:\Users\wikto\Desktop\projprzed\obj\Debug\net8.0\ref\RazorPagesMovie.dll
+c:\Users\wikto\Desktop\projprzed\obj\Debug\net8.0\RazorPagesMovie.sourcelink.json
