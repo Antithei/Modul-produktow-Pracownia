@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using RazorPagesMovie.Data;
 using RazorPagesMovie.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace RazorPagesMovie.Pages_Products
 {
@@ -21,9 +22,24 @@ namespace RazorPagesMovie.Pages_Products
 
         public IList<Product> Product { get;set; } = default!;
 
+        [BindProperty(SupportsGet = true)]
+        public string? SearchString { get; set; }
+
+        public SelectList? Titles { get; set; }
+
+        [BindProperty(SupportsGet = true)]
+        public string? ProductTitle { get; set; }
+
         public async Task OnGetAsync()
         {
-            Product = await _context.Product.ToListAsync();
+            var products = from p in _context.Product
+                select p;
+            if (!string.IsNullOrEmpty(SearchString))
+            {
+                products = products.Where(s => s.Title.Contains(SearchString));
+            }
+
+            Product = await products.ToListAsync();
         }
     }
 }
