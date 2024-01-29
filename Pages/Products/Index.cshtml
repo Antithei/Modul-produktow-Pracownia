@@ -2,7 +2,7 @@
 @model RazorPagesMovie.Pages_Products.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Products";
 }
 
 <h1>Index</h1>
@@ -13,6 +13,11 @@
 <table class="table">
     <thead>
         <tr>
+            <!-- Dodaj kolumnę dla Id -->
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].Id)
+            </th>
+            
             <th>
                 @Html.DisplayNameFor(model => model.Product[0].Title)
             </th>
@@ -36,6 +41,10 @@
         {
             <tr>
                 <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                
+                <td>
                     @Html.DisplayFor(modelItem => item.Title)
                 </td>
                 <td>
@@ -48,7 +57,6 @@
                     @Html.DisplayFor(modelItem => item.CreationDate)
                 </td>
                 <td>
-                    <!-- Wyświetlanie obrazu -->
                     <img src="@item.ImageUrl" alt="Product Image" class="img-thumbnail" style="max-width: 200px; max-height: 200px;">
                 </td>
                 <td>

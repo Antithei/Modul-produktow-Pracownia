@@ -13,7 +13,9 @@
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
             <input type="hidden" asp-for="Product.Id" />
+            
             <div class="form-group">
                 <label asp-for="Product.Title" class="control-label"></label>
                 <input asp-for="Product.Title" class="form-control" />
@@ -39,7 +41,6 @@
                 <input asp-for="Product.ImageUrl" class="form-control" />
                 <span asp-validation-for="Product.ImageUrl" class="text-danger"></span>
             </div>
-            <!-- Wyświetlanie obrazu -->
             <img src="@Model.Product.ImageUrl" alt="Product Image" class="img-thumbnail" style="max-width: 200px; max-height: 200px;">
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

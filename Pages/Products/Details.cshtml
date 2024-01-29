@@ -11,6 +11,14 @@
     <h4>Product</h4>
     <hr />
     <dl class="row">
+        <!-- Dodaj pole dla Id -->
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Product.Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Product.Id)
+        </dd>
+        
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Product.Title)
         </dt>
@@ -39,7 +47,6 @@
             Image
         </dt>
         <dd class="col-sm-10">
-            <!-- Wyświetlanie obrazu -->
             <img src="@Model.Product.ImageUrl" alt="Product Image" style="max-width: 200px; max-height: 200px;">
         </dd>
     </dl>
