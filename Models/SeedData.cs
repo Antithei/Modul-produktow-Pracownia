@@ -26,9 +26,8 @@ namespace RazorPagesMovie.Models
                 context.Product.AddRange(
                     new Product
                     {
-                        Title = "Mleko",
-                        Id = 1,
-                        Description = "3,2% łaciate",
+                        Title = "Product 1",
+                        Description = "Description for Product 1",
                         CreationDate = DateTime.Parse("2023-01-01"),
                         ImageUrl = "url_to_image_for_product_1",
                         IsDeleted = false
@@ -37,7 +36,6 @@ namespace RazorPagesMovie.Models
                     new Product
                     {
                         Title = "Product 2",
-                        Id = 2,
                         Description = "Description for Product 2",
                         CreationDate = DateTime.Parse("2023-01-02"),
                         ImageUrl = "url_to_image_for_product_2",
@@ -47,7 +45,6 @@ namespace RazorPagesMovie.Models
                     new Product
                     {
                         Title = "Product 3",
-                        Id = 3,
                         Description = "Description for Product 3",
                         CreationDate = DateTime.Parse("2023-01-03"),
                         ImageUrl = "url_to_image_for_product_3",

@@ -46,7 +46,16 @@
                 <input asp-for="Product.ImageUrl" class="form-control" />
                 <span asp-validation-for="Product.ImageUrl" class="text-danger"></span>
             </div>
-            <img src="@Model.Product.ImageUrl" alt="Product Image" class="img-thumbnail" style="max-width: 200px; max-height: 200px;">
+            
+            @if (Model.Product != null && !string.IsNullOrEmpty(Model.Product.ImageUrl))
+            {
+                <img src="@Model.Product.ImageUrl" alt="Product Image" class="img-thumbnail" style="max-width: 200px; max-height: 200px;">
+            }
+            else
+            {
+                <p>No image available</p>
+            }
+            
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
